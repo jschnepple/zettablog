@@ -8,7 +8,7 @@
                         
 							<div id="sidebar">
                             	<div class="button-box">
-                                	<h2 class="title helv">Get Faster Backup <br />& DR with Zetta.net</h2>
+                                	<h2 class="title">Get Faster Backup <br />& DR with Zetta.net</h2>
 
                                    <!-- <span class="subTag helv">enterprise-grade</span>
                                     <span class="mainTag helv">Cloud Backup &amp;<br />Disaster Recovery</span>-->
