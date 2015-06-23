@@ -16,7 +16,22 @@
                                     <a class="get-pricing-button" href="http://pages.zetta.net/requestquoteservices.html"></a>
                                 </div>
                                 <div class="horizontal-border"></div>
-                                
+                                <div class="button-box">
+                                    <h2 class="title">Top 10 Posts</h2>
+                                    <ol>
+                                        <li><a href="http://www.zetta.net/blog/cloud-vs-appliance-based-backup-speed-test-showdown/">Cloud vs. Appliance-based Backup: Speed Test Showdown</a></li>
+                                        <li><a href="http://www.zetta.net/blog/cloud-storage-explained-yahoo-give-flickr-users-1tb-free/">Cloud Storage Explained: How Can Yahoo Give Flickr Users 1TB Free?</a></li>
+                                        <li><a href="http://www.zetta.net/blog/amazon-s3-backup-penny-wise-dollar-foolish/">Amazon S3 For Backup: Penny Wise, Dollar Foolish</a></li>
+                                        <li><a href="http://www.zetta.net/blog/200tb-in-the-cloud/">Opening the Door to 200TB in the Cloud</a></li>
+                                        <li><a href="http://www.zetta.net/blog/microsoft-azure-online-backup-overpriced/">Is Microsoft Azure Online Backup Overpriced?</a></li>
+                                        <li><a href="http://www.zetta.net/blog/6-rules-backup-reddits-rsysadmin/">6 Rules of Backup According to Reddit’s /r/SysAdmin</a></li>
+                                        <li><a href="http://www.zetta.net/blog/back-up-20tb-of-museum-art-to-the-cloud-fastpriceless/">Backing Up 20TB of Museum Art to the Cloud Fast: Priceless</a></li>
+                                        <li><a href="http://www.zetta.net/blog/bare-metal-restore-cloud-backup/">Bare Metal Restore and Cloud Backup</a></li>
+                                        <li><a href="http://www.zetta.net/blog/amazon-s3-for-backup-disaster-recovery/">Amazon S3 for Backup: Disaster Recovery</a></li>
+                                        <li><a href="http://www.zetta.net/blog/cloud-backup-solutions-6-key-considerations-msps/">Cloud Backup Solutions: 6 Key Considerations For MSPs</a></li>
+                                    </ol>
+                                </div>
+                                <div class="horizontal-border"></div>
                                 <!-- <div id="newOptin" class="newWidget padded">
                                 	<a href="<?php bloginfo('url'); ?>/feed/" target="_blank" class="feedSubscribe"></a>
                                 	<h2 class="newSideTitle">Subscribe</h2>
@@ -70,7 +85,7 @@
 							
 							<?php endif; ?>
 						</ul>
-					   <a class="archives-button" href="/archive"></a>
+					   <a class="archives-button" href="http://www.zetta.net/blog"></a>
                     </div>
 				<!-- <div class="whiteBoxBot"></div> -->
 			</div> <!-- end sidebar -->

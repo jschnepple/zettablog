@@ -119,14 +119,14 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 <!-- BEGIN HEADER FRAME -->
 <div id="header" class="new" style="background-image: none;">
     <div itemscope itemtype="http://schema.org/Organization" id="logo" >
-	<a href="/" id="headerLogo"><img src="<?php bloginfo('template_directory'); ?>/images/new_logo.png" alt="Zetta logo" /></a>
+	<a href="http://www.zetta.net/" id="headerLogo"><img src="<?php bloginfo('template_directory'); ?>/images/new_logo.png" alt="Zetta logo" /></a>
     </div>
     <div class="tagline">
 	<p class="nospace helv">Enterprise-grade Cloud Backup<br> and Disaster Recovery</p>
     </div>
     <div id="topnav" class="nospace">
         <a href="https://admin.zetta.net/" class="helv" title="Login">Login</a>
-        <a href="/blog/" class="helv" title="Blog">Blog</a>
+        <a href="http://blog.zetta.net" class="helv" title="Blog">Blog</a>
         <a href="http://pages.zetta.net/contact-us.html" class="helv" title="Contact Us">Contact Us</a>
         <a href="http://pages.zetta.net/pricing.html" class="last helv" title="Pricing">Pricing</a>
     </div>
@@ -136,97 +136,97 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 <div id="marketomenu" class="blog">
 <div id="mainnav" class="">
 	        <ul style="width: 741px;">
-    	    	<li class="first <?php if ($mainNavId == 'products') {echo 'active';} ?>"><a href="/Zetta-Data-Protect.php">Products</a>
+    	    	<li class="first <?php if ($mainNavId == 'products') {echo 'active';} ?>"><a href="http://www.zetta.net/Zetta-Data-Protect.php">Products</a>
                 	<ul class="subnav first" style="position:absolute;">
-                    	<li><a href="/Zetta-Data-Protect.php">Zetta DataProtect</a>
+                    	<li><a href="http://www.zetta.net/Zetta-Data-Protect.php">Zetta DataProtect</a>
                         	<ul class="subnav second" style="position:absolute;">
-                            	<li><a href="/Zetta-Data-Protect.php">Overview</a></li>
-                                <li><a href="/architecture.php">Architecture</a></li>
-                                <li><a href="/screenshots.php">Screenshots</a></li>
+                            	<li><a href="http://www.zetta.net/Zetta-Data-Protect.php">Overview</a></li>
+                                <li><a href="http://www.zetta.net/architecture.php">Architecture</a></li>
+                                <li><a href="http://www.zetta.net/screenshots.php">Screenshots</a></li>
                             </ul>
 						</li>
                     </ul>
                 </li>
                 
-                <li class="<?php if ($mainNavId == 'it-initiatives') {echo 'active';} ?>"><a href="/Multi-Platform-Backups.php">IT Initiatives</a>
+                <li class="<?php if ($mainNavId == 'it-initiatives') {echo 'active';} ?>"><a href="http://www.zetta.net/Multi-Platform-Backups.php">IT Initiatives</a>
                 	<ul class="subnav first">
-                        <li><a href="/server-backup/index.php">Server Backup</a>
+                        <li><a href="http://www.zetta.net/server-backup/index.php">Server Backup</a>
                             <ul class="subnav second" style="position:absolute;">
-                                    <li><a href="/server-backup/index.php">Windows Server Backup</a></li>
-                                    <li><a href="/exchange-server-cloud-backup/">Exchange Server Backup</a></li>
-                                    <li><a href="/sql-server-backup.php">SQL Server Backup</a></li>
-                                    <li><a href="/Multi-Platform-Backups.php">Multi-Platform Server Backups</a></li>
+                                    <li><a href="http://www.zetta.net/server-backup/index.php">Windows Server Backup</a></li>
+                                    <li><a href="http://www.zetta.net/exchange-server-cloud-backup/">Exchange Server Backup</a></li>
+                                    <li><a href="http://www.zetta.net/sql-server-backup.php">SQL Server Backup</a></li>
+                                    <li><a href="http://www.zetta.net/Multi-Platform-Backups.php">Multi-Platform Server Backups</a></li>
                             </ul>
                         </li>
-                    	<li><a href="/server-image-cloud-backup.php">Server Image Backup</a></li>
-                    	<li><a href="/remote-offsite-server-backup.php">Offsite Data Backup and DR</a></li>
-                        <li><a href="/offsite-backup-calculator.php">Tape Replacement - ROI Calculator</a></li>
-			<li><a href="/bare-metal-restore-servers/index.php">Bare Metal Restore</a></li>
-                        <li><a href="/netapp/">NetApp Offsite Backup &amp; DR</a></li>
-                        <li><a href="/it-disaster-recovery-plan.php">IT Disaster Recovery Planning</a></li>
-                        <li><a href="/backup-appliance-comparison.php">Appliance-free Backup &amp; DR</a>
+                    	<li><a href="http://www.zetta.net/server-image-cloud-backup.php">Server Image Backup</a></li>
+                    	<li><a href="http://www.zetta.net/remote-offsite-server-backup.php">Offsite Data Backup and DR</a></li>
+                        <li><a href="http://www.zetta.net/offsite-backup-calculator.php">Tape Replacement - ROI Calculator</a></li>
+			<li><a href="http://www.zetta.net/bare-metal-restore-servers/index.php">Bare Metal Restore</a></li>
+                        <li><a href="http://www.zetta.net/netapp/">NetApp Offsite Backup &amp; DR</a></li>
+                        <li><a href="http://www.zetta.net/it-disaster-recovery-plan.php">IT Disaster Recovery Planning</a></li>
+                        <li><a href="http://www.zetta.net/backup-appliance-comparison.php">Appliance-free Backup &amp; DR</a>
                     </ul>
                 </li>
                 
-                <li class="<?php if ($mainNavId == 'resources') {echo 'active';} ?>"><a href="/productAndService.php">Resources</a>
+                <li class="<?php if ($mainNavId == 'resources') {echo 'active';} ?>"><a href="http://www.zetta.net/productAndService.php">Resources</a>
                 	<ul class="subnav first">
-                    	<li><a href="/resources-datasheets-whitepapers.php">Datasheets &amp; Whitepapers</a></li>
-                        <li><a href="/resources-videos.php">Videos</a></li>
-                        <li><a href="/resources-analyst-reports.php">Analyst Reports</a></li>
-                        <li><a href="/resources-tools.php">Tools</a></li>                        
-                        <li><a href="/resources-webinars.php">Webinars</a></li>
-                        <li><a href="/zetta-competitor-reviews.php">Zetta vs. Competitors</a>
+                    	<li><a href="http://www.zetta.net/resources-datasheets-whitepapers.php">Datasheets &amp; Whitepapers</a></li>
+                        <li><a href="http://www.zetta.net/resources-videos.php">Videos</a></li>
+                        <li><a href="http://www.zetta.net/resources-analyst-reports.php">Analyst Reports</a></li>
+                        <li><a href="http://www.zetta.net/resources-tools.php">Tools</a></li>                        
+                        <li><a href="http://www.zetta.net/resources-webinars.php">Webinars</a></li>
+                        <li><a href="http://www.zetta.net/zetta-competitor-reviews.php">Zetta vs. Competitors</a>
 							<ul class="subnav second" style="position:absolute;">
-				<li><a href="/acronis-backup-alternative.php">Zetta vs. Acronis</a></li>
-                            	<!--<li><a href="/amazon-s3-cloud-backup-alternative.php">Zetta vs. Amazon S3</a></li>-->
-                                <li><a href="/appassure-backup-solution-alternative.php">Zetta vs. AppAssure</a></li>
-                                <li><a href="/barracuda-cloud-backup-alternative.php">Zetta vs. Barracuda</a></li>
-								<li><a href="/carbonite-backup-recovery-alternative.php">Zetta vs. Carbonite</a></li>
-								<li><a href="/evault-backup-solution-alternative.php">Zetta vs. eVault</a></li>
-								<li><a href="/microsoft-azure-backup-alternative.php">Zetta vs. Microsoft Azure</a></li>
-								<li><a href="/mozypro-online-backup-alternative.php">Zetta vs. Mozy Pro</a></li>
-								<li><a href="/symantec-backup-exec-alternative.php">Zetta vs. Symantec Backup Exec</a></li>
+				<li><a href="http://www.zetta.net/acronis-backup-alternative.php">Zetta vs. Acronis</a></li>
+                            	<!--<li><a href="http://www.zetta.net/amazon-s3-cloud-backup-alternative.php">Zetta vs. Amazon S3</a></li>-->
+                                <li><a href="http://www.zetta.net/appassure-backup-solution-alternative.php">Zetta vs. AppAssure</a></li>
+                                <li><a href="http://www.zetta.net/barracuda-cloud-backup-alternative.php">Zetta vs. Barracuda</a></li>
+								<li><a href="http://www.zetta.net/carbonite-backup-recovery-alternative.php">Zetta vs. Carbonite</a></li>
+								<li><a href="http://www.zetta.net/evault-backup-solution-alternative.php">Zetta vs. eVault</a></li>
+								<li><a href="http://www.zetta.net/microsoft-azure-backup-alternative.php">Zetta vs. Microsoft Azure</a></li>
+								<li><a href="http://www.zetta.net/mozypro-online-backup-alternative.php">Zetta vs. Mozy Pro</a></li>
+								<li><a href="http://www.zetta.net/symantec-backup-exec-alternative.php">Zetta vs. Symantec Backup Exec</a></li>
                             </ul>
 						</li>
                     </ul>
                 </li>
                 
-        	    <li class="<?php if ($mainNavId == 'customers') {echo 'active';} ?>"><a href="/customers.php">Customers</a>
+        	    <li class="<?php if ($mainNavId == 'customers') {echo 'active';} ?>"><a href="http://www.zetta.net/customers.php">Customers</a>
 					<ul class="subnav first">
-                    	<li><a href="/case-studies.php">Case Studies</a></li>
+                    	<li><a href="http://www.zetta.net/case-studies.php">Case Studies</a></li>
                         <li><a href="#">Industries</a>
                         	<ul class="subnav second" style="position:absolute;">
-                                <li><a href="/business-services.php">Business Services</a></li>
-                                <li><a href="/customers-education.php">Education</a></li>
-                                <li><a href="/financial-services.php">Financial Services</a></li>
-                                <li><a href="/legal-services.php">Legal Services</a></li>
-                                <li><a href="/media-and-entertainment.php">Media &amp; Entertainment</a></li>
-                                <li><a href="/software-and-technology.php">Software &amp; Technology</a></li>
-                                <li><a href="/manufacturing-industry.php">Manufacturing Industry</a></li>
-                                <li><a href="/non-profit-organizations.php">Non-Profit Organizations</a></li>
+                                <li><a href="http://www.zetta.net/business-services.php">Business Services</a></li>
+                                <li><a href="http://www.zetta.net/customers-education.php">Education</a></li>
+                                <li><a href="http://www.zetta.net/financial-services.php">Financial Services</a></li>
+                                <li><a href="http://www.zetta.net/legal-services.php">Legal Services</a></li>
+                                <li><a href="http://www.zetta.net/media-and-entertainment.php">Media &amp; Entertainment</a></li>
+                                <li><a href="http://www.zetta.net/software-and-technology.php">Software &amp; Technology</a></li>
+                                <li><a href="http://www.zetta.net/manufacturing-industry.php">Manufacturing Industry</a></li>
+                                <li><a href="http://www.zetta.net/non-profit-organizations.php">Non-Profit Organizations</a></li>
                             </ul>
                     	</li>
                     </ul>
 				</li>
             	
-	            <li class="<?php if ($mainNavId == 'newsEvents') {echo 'active';} ?>"><a href="/partners-home.php">Partners</a>
+	            <li class="<?php if ($mainNavId == 'newsEvents') {echo 'active';} ?>"><a href="http://www.zetta.net/partners-home.php">Partners</a>
                 	<ul class="subnav first">
-                    	<li><a href="/partners-home.php">Why Partner with Zetta?</a></li>
+                    	<li><a href="http://www.zetta.net/partners-home.php">Why Partner with Zetta?</a></li>
                         <li><a href="http://pages.zetta.net/online-backup-MSP-program.html">Become a Zetta Partner</a></li>
-                        <li><a href="/connect-wise.php">ConnectWise Integration</a></li>
-			<li><a href="/partner-resource-center.php">Partner Resources</a></li>
+                        <li><a href="http://www.zetta.net/connect-wise.php">ConnectWise Integration</a></li>
+			<li><a href="http://www.zetta.net/partner-resource-center.php">Partner Resources</a></li>
                     </ul>
                 </li>
 
-    	        <li class="last <?php if ($mainNavId == 'aboutUs') {echo 'active';} ?>" style=""><a href="/aboutUs.php">About Us</a>
+    	        <li class="last <?php if ($mainNavId == 'aboutUs') {echo 'active';} ?>" style=""><a href="http://www.zetta.net/aboutUs.php">About Us</a>
                 	<ul class="subnav first">
-                    	<li><a href="/news.php">Zetta in the news</a></li>
-                        <li><a href="/awards.php">Awards</a></li>
-                        <li><a href="/pressReleases.php">Zetta press releases</a></li>                        
-                    	<li><a href="/management.php">Management</a></li>
-                        <li><a href="/boardOfDirectors.php">Board of Directors</a></li>
-                        <li><a href="/investors.php">Investors</a></li>
-                        <li><a href="/careers.php">Careers</a></li>
+                    	<li><a href="http://www.zetta.net/news.php">Zetta in the news</a></li>
+                        <li><a href="http://www.zetta.net/awards.php">Awards</a></li>
+                        <li><a href="http://www.zetta.net/pressReleases.php">Zetta press releases</a></li>                        
+                    	<li><a href="http://www.zetta.net/management.php">Management</a></li>
+                        <li><a href="http://www.zetta.net/boardOfDirectors.php">Board of Directors</a></li>
+                        <li><a href="http://www.zetta.net/investors.php">Investors</a></li>
+                        <li><a href="http://www.zetta.net/careers.php">Careers</a></li>
                         <li><a href="http://pages.zetta.net/contact-us.html">Contact Us</a></li>
                     </ul>
                 </li>
