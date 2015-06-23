@@ -21,7 +21,7 @@ $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
 $REMOTE_REPO        = "http://github.com/jschnepple/zettablog";
 $BRANCH             = "master";
 print("entering script");
-if ( $_POST['payload'] ) {
+if ( $_POST['Payload'] ) {
   // Only respond to POST requests from Github
   print("there is a payload");
 
