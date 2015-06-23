@@ -359,10 +359,12 @@ html>body .entry li {
 }
 #sidebar .button-box ol li{
 	margin-bottom: 10px;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 125%;
 }
 #sidebar .button-box ol li a {
 	font-family: Arial, Helvetica, Sans-Serif;
-	font-size: 125%;
+	
 }
 
 #sidebar ul ul, #sidebar ul ol { margin: 5px 0 0 10px; }
@@ -905,4 +907,4 @@ a.thumbnail-wrapper img{display:block;max-width:180px;float:left;margin-right:15
 .widget_zetta_recent_entries .widgettitlez{  color: #57585a;  font-weight: bold !important;  font-size: 145% !important;  margin: 0 !important;  text-transform: none;  border: none;  padding: 0;}
 .widget_zetta_recent_entries ol li {   margin: 10px 0 0 20px !important;  font-size: 125%;}
 .zettatagcloud { color: #333333;}
-.zettatagcloud a {font-size:100% !important; }
+.zettatagcloud a {font-size:125% !important; }
