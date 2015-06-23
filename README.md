@@ -1,0 +1,2 @@
+# zettablog
+blog.zetta.net
