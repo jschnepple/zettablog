@@ -20,13 +20,8 @@ $LOCAL_REPO_NAME    = ".";
 $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
 $REMOTE_REPO        = "http://github.com/jschnepple/zettablog";
 $BRANCH             = "master";
-print("entering script \r\n");
-print($_POST);
-print("\r\n");
-print($_SERVER['REQUEST_METHOD']);
 if ( $_SERVER['REQUEST_METHOD'] == "POST") {
   // Only respond to POST requests from Github
-  print("there is a payload");
 
     // If there is already a repo, just run a git pull to grab the latest changes
     shell_exec("git pull");
