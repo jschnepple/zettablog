@@ -354,6 +354,16 @@ html>body .entry li {
 	margin: 5px 0 8px;
 	padding:0;
 }
+#sidebar .button-box ol {
+	  margin: 20px 0 0px 0;
+}
+#sidebar .button-box ol li{
+	margin-bottom: 10px;
+}
+#sidebar .button-box ol li a {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 125%;
+}
 
 #sidebar ul ul, #sidebar ul ol { margin: 5px 0 0 10px; }
 
