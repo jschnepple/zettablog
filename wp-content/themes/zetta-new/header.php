@@ -24,7 +24,7 @@ $sp = "/";
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -49,7 +49,7 @@ $sp = "/";
 <!-- also include the yahoo reset and fonts and the main site stylesheet -->
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" href="/site.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/responsive.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive.css" type="text/css" media="all" />
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
