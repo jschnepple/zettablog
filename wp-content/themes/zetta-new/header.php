@@ -30,8 +30,8 @@ $sp = "/";
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js" type="text/javascript"></script>
-<!-- <script src="/js/cufon/zettahelv_400-zettahelv_700.font.js" type="text/javascript"></script> -->
+<!-- <script src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js" type="text/javascript"></script>
+<script src="/js/cufon/zettahelv_400-zettahelv_700.font.js" type="text/javascript"></script> 
 <script src="<?php bloginfo('template_directory'); ?>/js/zettahelv_400-zettahelv_700.font.js" type="text/javascript"></script>
 <script type="text/javascript">
   Cufon.replace("#mainnav ul li a", {hover:true, fontFamily: 'zettahelv'});
@@ -44,7 +44,7 @@ $sp = "/";
 	/*	Cufon.replace('.slidebox .title', {textShadow: '-1px -1px 0 #1b749f'});
 		Cufon.replace('.slidebox .text1', {textShadow: '1px 1px 0 #1b749f'});
 		Cufon.replace('.slidebox .text2', {textShadow: '1px 1px 0 #1b749f'});  */
-</script> 
+</script> -->
 
 <!-- also include the yahoo reset and fonts and the main site stylesheet -->
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css">
