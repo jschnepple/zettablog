@@ -73,14 +73,13 @@ $sp = "/";
                     <a href="http://community.spiceworks.com/pages/zetta" class="icSp"></a>
                     <a href="http://www.slideshare.net/Zettanet" class="icSs last"></a>
                 </div>
-                <a href="javascript:void(0)">&copy; <?php echo date('Y'); ?> Zetta, Inc. All rights reserved.</a>
+                <a href="javascript:void(0)">&copy; <?php echo date('Y'); ?> Zetta, Inc. All rights reserved..</a>
 			</center> 
         </div>
 	</div>
 <!-- END FOOTER -->
 
 <?php wp_footer(); ?>
-<!--<script type="text/javascript"> Cufon.now(); </script>-->
 <script type="text/javascript">
 (function() {
   var didInit = false;
@@ -103,6 +102,5 @@ $sp = "/";
   document.getElementsByTagName('head')[0].appendChild(s);
 })();
 </script>  
-<!--<script type="text/javascript"> Cufon.now(); </script>-->
 </body>
 </html>
