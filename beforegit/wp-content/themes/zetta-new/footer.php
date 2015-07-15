@@ -80,7 +80,7 @@ $sp = "/";
 <!-- END FOOTER -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript"> Cufon.now(); </script>
+<!--<script type="text/javascript"> Cufon.now(); </script>-->
 <script type="text/javascript">
 (function() {
   var didInit = false;
@@ -103,6 +103,6 @@ $sp = "/";
   document.getElementsByTagName('head')[0].appendChild(s);
 })();
 </script>  
-<script type="text/javascript"> Cufon.now(); </script>
+<!--<script type="text/javascript"> Cufon.now(); </script>-->
 </body>
 </html>
