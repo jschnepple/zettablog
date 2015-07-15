@@ -1,0 +1,5 @@
+#ignore symlinks, which must be set for each env.
+nav.css
+nav.js
+scripts.php
+site.js
