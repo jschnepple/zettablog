@@ -125,7 +125,7 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 	<a href="http://www.zetta.net/" id="headerLogo"><img src="<?php bloginfo('template_directory'); ?>/images/new_logo.png" alt="Zetta logo" /></a>
     </div>
     <div class="tagline">
-	<p class="nospace helv">Enterprise-grade Cloud Backup<br> and Disaster Recovery</p>
+	<p class="nospace helv">Enterprise-grade Cloud Backup<br> and Disaster Recovery!</p>
     </div>
     <div id="topnav" class="nospace">
         <a href="https://admin.zetta.net/" class="helv" title="Login">Login</a>
