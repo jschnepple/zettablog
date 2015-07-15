@@ -25,7 +25,7 @@ $sp = "/";
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" media="all" />
+
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -48,6 +48,7 @@ $sp = "/";
 </script> -->
 
 <!-- also include the yahoo reset and fonts and the main site stylesheet -->
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" href="/site.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive.css" type="text/css" media="all" />
@@ -96,29 +97,11 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
  <?php } }  ?>
 </head>
 <body>
-    <script type="text/javascript">
-        // Facebook shizzle
-        window.fbAsyncInit = function() {
-            var a = "let's try Facebook";
-            FB.init( {
-                appId  : '232053710158192',
-                status : true, // check login status
-                cookie : true, // enable cookies to allow the server to access the session
-                xfbml  : true  // parse XFBML
-            } );
-        };
-    </script>
 	<!-- BEGIN STICKY FOOTER WRAPPER -->
 	<div class="stickyFooterWrap">
 		<!-- BEGIN OUTER FRAME -->
 		<div id="outerFrame">
-        <div id="lpChatBtn">
-            <!-- BEGIN LivePerson Button Code -->
-            <div id="lpButDivID-1313166174343"></div>
-            <script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/30095182/?cmd=mTagRepstate&site=30095182&buttonID=12&divID=lpButDivID-1313166174343&bt=1&c=1"></script>
-            <!-- END LivePerson Button code -->
-        </div>
-        
+
 <!-- BEGIN HEADER FRAME -->
 <div id="header" class="new" style="background-image: none;">
     <div itemscope itemtype="http://schema.org/Organization" id="logo" >
