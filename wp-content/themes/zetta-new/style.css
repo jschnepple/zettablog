@@ -918,3 +918,14 @@ a.thumbnail-wrapper img{display:block;max-width:180px;float:left;margin-right:15
 .mobileNav ul.mob-subnav{display:none; height:auto !important; border:none !important; width:100% !important;}
 .mobileNav li a.mob-nav-parent::after{content:"\+";display: block;  float: right;  font-size: 32px;  font-family: Arial;}
 .mobileNav li.m-item-sec a{padding-left: 60px !important; border-left: 1px solid #fff !important;}
+.mobIcon{display:none;position: relative;padding-left: 1.25em;}
+.mobIcon:before{
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  width: 2.3em;
+  height: 0.2em;
+  border-top: 0.7em double #fff;
+  border-bottom: 0.7em double #fff;
+}
