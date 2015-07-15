@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *"); 
+//header("Access-Control-Allow-Origin: *"); 
 //ini_set('display_errors',1);
 //error_reporting(E_ALL);
 /**
@@ -25,7 +25,7 @@ $sp = "/";
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" media="all" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -125,7 +125,7 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 	<a href="http://www.zetta.net/" id="headerLogo"><img src="<?php bloginfo('template_directory'); ?>/images/new_logo.png" alt="Zetta logo" /></a>
     </div>
     <div class="tagline">
-	<p class="nospace helv">Enterprise-grade Cloud Backup<br> and Disaster Recovery!</p>
+	<p class="nospace helv">Enterprise-grade Cloud Backup<br> and Disaster Recovery</p>
     </div>
     <div id="topnav" class="nospace">
         <a href="https://admin.zetta.net/" class="helv" title="Login">Login</a>
