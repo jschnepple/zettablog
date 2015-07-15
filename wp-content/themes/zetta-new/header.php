@@ -11,6 +11,7 @@
 // Note that this won't work for paths to include files - use symlinks for 
 // those.
 $sp = "/";
+$versionNumber = "?ver=";
 ?>
 <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
 <!DOCTYPE HTML>
@@ -48,10 +49,10 @@ $sp = "/";
 </script> -->
 
 <!-- also include the yahoo reset and fonts and the main site stylesheet -->
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/blog.css" type="text/css" media="all" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/blog.css<?php echo $versionNumber; echo uniqid(); ?>" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" href="/site.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive.css" type="text/css" media="all" />
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/responsive.css<?php echo $versionNumber; echo uniqid(); ?>" type="text/css" media="all" />
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -95,6 +96,14 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l63z1&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript>
 
  <?php } }  ?>
+ <script type="text/javascript">
+    if($(window).width() < 768) {
+        $('a.mob-nav-parent').click(function(e){
+            e.preventDefault();
+            $(this).siblings('.mob-subnav').toggle();
+        });
+    }
+ </script>
 </head>
 <body>
 	<!-- BEGIN STICKY FOOTER WRAPPER -->
