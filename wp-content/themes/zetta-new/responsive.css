@@ -424,4 +424,5 @@
 	#container1of2 {width:100%; float:none; right: 0;}
 	#container2of2 {width:100%; float:none; overflow:auto;}
 	#bodyFrame {padding:0; width:100%;}
+	#col2of2 {display:none;}
 }
