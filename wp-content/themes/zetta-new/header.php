@@ -26,7 +26,7 @@ $versionNumber = "?ver=";
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
-
+<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/js/public_functions.js<?php echo $versionNumber; echo uniqid(); ?>"></script>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -96,14 +96,6 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l63z1&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript>
 
  <?php } }  ?>
- <script type="text/javascript">
-    if($(window).width() < 768) {
-        $('a.mob-nav-parent').click(function(e){
-            e.preventDefault();
-            $(this).siblings('.mob-subnav').toggle();
-        });
-    }
- </script>
 </head>
 <body>
 	<!-- BEGIN STICKY FOOTER WRAPPER -->
