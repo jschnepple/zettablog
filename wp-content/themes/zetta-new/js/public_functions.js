@@ -2,12 +2,11 @@
 //$.noConflict();
   jQuery(document).ready(function($) {
   	/* MOBILE SUBMENU */
-  	if($(window).width() < 768) {
 	   	$('a.mob-nav-parent').click(function(e){
+	   		console.log("menu click");
 	  		e.preventDefault();
 	  		$(this).siblings('.mob-subnav').toggle();
 	  	});
-    }
   	/* END MOBILE SUBMENU */
 	
 	$(".carousel").jCarouselLite({
