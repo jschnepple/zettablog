@@ -21,7 +21,7 @@ $sp = "/";
 <meta content="IE=8" http-equiv="X-UA-Compatible" />
 
 
-<title><?php wp_title('&laquo;', true, 'right'); ?></title>
+<title><?php wp_title('&laquo;', true, 'right'); ?> 1</title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
