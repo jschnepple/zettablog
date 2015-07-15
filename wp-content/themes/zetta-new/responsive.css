@@ -425,4 +425,9 @@
 	#container2of2 {width:100%; float:none; overflow:auto;}
 	#bodyFrame {padding:0; width:100%;}
 	#col2of2 {display:none;}
+	.post {width:100%;}
+	#aboutZettaBottom{display:none;}
+	#signupBox{display:none;}
+	.header-title h3 {font-size:245%}
+	.header-title {margin: 25px 0 25px 0;}
 }
