@@ -178,7 +178,7 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
                         <li><a href="http://www.zetta.net/resources-webinars.php">Webinars</a></li>
                         <li><a href="http://www.zetta.net/zetta-competitor-reviews.php">Zetta vs. Competitors</a>
 							<ul class="subnav second" style="position:absolute;">
-				<li><a href="http://www.zetta.net/acronis-backup-alternative.php">Zetta vs. Acronis</a></li>
+				                <li><a href="http://www.zetta.net/acronis-backup-alternative.php">Zetta vs. Acronis</a></li>
                             	<!--<li><a href="http://www.zetta.net/amazon-s3-cloud-backup-alternative.php">Zetta vs. Amazon S3</a></li>-->
                                 <li><a href="http://www.zetta.net/appassure-backup-solution-alternative.php">Zetta vs. AppAssure</a></li>
                                 <li><a href="http://www.zetta.net/barracuda-cloud-backup-alternative.php">Zetta vs. Barracuda</a></li>
@@ -215,7 +215,7 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
                     	<li><a href="http://www.zetta.net/partners-home.php">Why Partner with Zetta?</a></li>
                         <li><a href="http://pages.zetta.net/online-backup-MSP-program.html">Become a Zetta Partner</a></li>
                         <li><a href="http://www.zetta.net/connect-wise.php">ConnectWise Integration</a></li>
-			<li><a href="http://www.zetta.net/partner-resource-center.php">Partner Resources</a></li>
+			             <li><a href="http://www.zetta.net/partner-resource-center.php">Partner Resources</a></li>
                     </ul>
                 </li>
 
