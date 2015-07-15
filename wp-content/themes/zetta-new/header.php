@@ -17,9 +17,10 @@ $sp = "/";
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> style="margin-top: 0px !important;">
 
 <head profile="http://gmpg.org/xfn/11">
+
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta content="IE=8" http-equiv="X-UA-Compatible" />
-
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
