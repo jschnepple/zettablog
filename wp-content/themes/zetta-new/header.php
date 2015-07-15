@@ -26,12 +26,13 @@ $versionNumber = "?ver=";
 <title><?php wp_title('&laquo;', true, 'right'); ?> </title>
 <link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 
-<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/js/public_functions.js<?php echo $versionNumber; echo uniqid(); ?>"></script>
+
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/js/public_functions.js<?php echo $versionNumber; echo uniqid(); ?>"></script>
 <!-- <script src="<?php bloginfo('template_directory'); ?>/js/cufon-yui.js" type="text/javascript"></script>
 <script src="/js/cufon/zettahelv_400-zettahelv_700.font.js" type="text/javascript"></script> 
 <script src="<?php bloginfo('template_directory'); ?>/js/zettahelv_400-zettahelv_700.font.js" type="text/javascript"></script>
