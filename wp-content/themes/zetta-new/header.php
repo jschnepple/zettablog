@@ -49,6 +49,7 @@ $sp = "/";
 <!-- also include the yahoo reset and fonts and the main site stylesheet -->
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" href="/site.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/responsive.css" type="text/css" media="screen" />
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
