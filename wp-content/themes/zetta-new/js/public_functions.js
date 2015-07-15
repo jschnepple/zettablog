@@ -8,4 +8,5 @@
 	  		$(this).siblings('.mob-subnav').toggle();
 	  	});
   	/* END MOBILE SUBMENU */
+  }
 //]]>
