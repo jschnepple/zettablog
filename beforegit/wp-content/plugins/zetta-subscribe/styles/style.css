@@ -1,0 +1,37 @@
+.clear {display:block; clear:both;}
+.mainbox {display:block; width: 100%; margin: 25px auto; font-family:Verdana, Geneva, sans-serif;}
+.mainbox .left {display:block; width: 800px; margin 0 auto; border: 1px solid #CCC; }
+
+.mainbox .left h2 { padding-left: 25px; display:block; height: 40px; line-height: 40px; background: #eeeeee; /* Old browsers */
+background: -moz-linear-gradient(top,  #eeeeee 0%, #dddddd 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eeeeee 0%,#dddddd 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eeeeee 0%,#dddddd 100%); /* IE10+ */
+background: linear-gradient(top,  #eeeeee 0%,#dddddd 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+border-bottom: 1px solid #CCC; font-weight: bold; color:#39F;}
+
+.mainbox .left .content {background: #eeeeee; /* Old browsers */
+background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(top,  #eeeeee 0%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+padding: 25px; color: #666;}
+
+.mainbox .left .content fieldset {padding: 15px 0; border-bottom: 5px solid #ccc;}
+.mainbox .left .content fieldset.last{ border-bottom: none; }
+.mainbox .left .content h3 { padding-top: 0px; margin-top: 0px; padding-bottom: 3px; border-bottom: 1px dotted #3CF; color:#3CF; max-width: 50%; }
+.mainbox .left .content fieldset label {display:block; width: 300px; float:left;}
+.mainbox .left .content fieldset input[type="text"], .mainbox .left .content fieldset select {display:block; width: 80%; padding: 5px; height: 30px; line-height: 30px;}
+.mainbox .left .content fieldset iframe  { background: white; }
+.mainbox #resetcounter {display:block; float:right; width:40px; cursor:pointer;}
+
+#clickboxholder { position:fixed;  background: transparent url(../images/overlay.png) repeat; z-index: 9999999; top: 0px; left: 0px; }
+#clickboxholder #clickbox {display:block; margin-left: auto; margin-right: auto; background-color:white; padding: 25px; font-size: 12px; line-height: 16px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; border: 5px solid #333; -moz-box-shadow: 0 0 15px #000; -webkit-box-shadow: 0 0 15px #000; box-shadow: 0 0 15px #000;}
+#clickboxholder #clickbox p {margin-bottom: 10px;}
+#clickboxholder #clickbox #clickpopclose {position:absolute; right:10px; top: 10px; display: block; background: white url(../images/close.png) no-repeat 0 0; width: 28px; height: 28px; cursor:pointer;}
+#clickboxholder #clickbox #clickpopclose:hover {background-position: 0 -28px;}
