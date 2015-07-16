@@ -657,8 +657,6 @@ $GLOBALS['_wp_deprecated_widgets_callbacks'] = array(
 	'wp_widget_rss',
 	'wp_widget_rss_control',
 	'wp_widget_recent_comments',
-	'zetta_tag_cloud',
-	'zetta_recent_posts',
 	'wp_widget_recent_comments_control'
 );
 
