@@ -84,6 +84,34 @@ $f = "F jS, Y";
             </div>
 <?php } ?>
 
+<?php if (get_the_author() == "Maggie Getova"){?>
+            <div class="authorBox" style="display: block; padding: 12px; background: #eef5f8; margin: 25px 0;">
+                <div class="authPhoto" style="padding: 4px 5px 4px 4px; background: #fff; border: 1px solid #dbdcdd; display: block; float: left; width: 130px;"><?php userphoto_the_author_photo(); ?></div>
+                <div class="authDetails" style="display: block; float: right; width: 460px;">
+                <span style = "font-size: 18px; font-weight: bold; color: #0d5977; padding: 0px; display: block; border-bottom: 1px dotted #0d5977;">About the Author</span>    
+        <span class="biography" style="font-size: 14px; color: #303030; line-height: 19px; padding: 14px 0 10px; display: block;">Maggie is Zetta.net’s junior content marketing contributor. When she’s not writing for the blog, she’spending way too much time on the internet.</span>
+        <!--<div class="followLeft">
+                <span class="follow" style="display: block; font-size: 13px; color: #2395c0; font-weight: bold; margin-bottom: 6px;">Follow Maggie Getova:</span>
+                    <div class="followLinks" style="position:relative;">
+                        <a href="https://plus.google.com/u/0/104107015378133237145/posts?rel=author" target="_blank"><img src="http://pages.zetta.net/rs/zetta/images/iconGoogle.png" alt="GooglePlus"></a>
+                    </div>
+        </div>-->
+        <div class="followRight">
+                <span class="follow" style="display: block; font-size: 13px; color: #2395c0; font-weight: bold; margin-bottom: 6px;">Follow Zetta:</span>
+                    <div class="followLinks" style="position:relative;">
+                        <a class="social facebook" target="_blank" href="https://www.facebook.com/zettastorage"></a>
+                        <a class="social linked" target="_blank" href="http://www.linkedin.com/company/zetta-inc."></a>
+                        <a class="social twitter" target="_blank" href="https://twitter.com/zettanet"></a>
+                        <a class="social google" target="_blank" href="https://plus.google.com/+ZettaNetBackup/posts"></a>
+                        <a class="social other" target="_blank" href="http://community.spiceworks.com/pages/zetta"></a>
+            <a class="social youtube" target="_blank" href="https://www.youtube.com/user/zettabackup"></a>
+                    </div>
+        </div>
+                </div>
+                <div style="clear:both; display:block;"></div>
+            </div>
+<?php } ?>
+
 <?php if (get_the_author() == "Chris Schin"){?>
             <div class="authorBox" style="display: block; padding: 12px; background: #eef5f8; margin: 25px 0;">
                 <div class="authPhoto" style="padding: 4px 5px 4px 4px; background: #fff; border: 1px solid #dbdcdd; display: block; float: left; width: 130px;"><?php userphoto_the_author_photo(); ?></div>

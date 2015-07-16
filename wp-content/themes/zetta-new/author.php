@@ -5,7 +5,7 @@
  */
 get_header();
 
-function catch_that_image() {
+/*function catch_that_image() {
   global $post, $posts;
   $first_img = '';
   ob_start();
@@ -17,7 +17,7 @@ function catch_that_image() {
     $first_img = "/images/zettanewbig.png";
   }
   return $first_img;
-}
+}*/
 ?>
 	<div id="content" class="narrowcolumn">
     	<div class="post">
