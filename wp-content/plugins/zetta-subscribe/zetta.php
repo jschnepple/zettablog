@@ -130,7 +130,7 @@ class Zettaw {
 		}
 		if (test == 0) {
 			console.log("email trying to send");
-			var url = "http://www-stage.zetta.net/blog/wp-content/plugins/zetta-subscribe/";
+			var url = "http://blog.zetta.net/wp-content/plugins/zetta-subscribe/";
 			console.log("url = " + url);
 			$.get(url + 'process.php', { subname: subname, subemail: subemail }, function(data) {
   				//$('#formholderzetta').fadeOut('fast');
