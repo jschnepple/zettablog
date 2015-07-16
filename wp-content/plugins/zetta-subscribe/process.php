@@ -1,6 +1,6 @@
 <?php
 include('../../../wp-load.php');
-include_once('../../../wp-includes\option.php');
+include_once('../../../wp-includes/option.php');
 global $wpdb;
 $table_name = $wpdb->prefix . "zettasubscribe";
 $name = $_GET['subname'];
