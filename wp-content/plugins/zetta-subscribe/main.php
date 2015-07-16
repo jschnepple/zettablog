@@ -35,7 +35,7 @@ if ($_POST['saveoptions']) {
                 <table width="100%" cellspacing="5" cellpadding="10">
                     <tr>
                         <th style="text-align:left; background-color:#39F; color:#fff;">ID</th>
-                        <th style="text-align:left; background-color:#39F; color:#fff;">Name</th>
+                        <!--<th style="text-align:left; background-color:#39F; color:#fff;">Name</th>-->
                         <th style="text-align:left; background-color:#39F; color:#fff;">Email</th>
                         <th style="text-align:left; background-color:#39F; color:#fff;">Joined Date</th>
                     </tr>
@@ -48,7 +48,7 @@ if ($_POST['saveoptions']) {
                         $i++; ?>
                         <tr style=" <?php if ($i % 2 == 0) echo 'background-color:#fafafa;'; else echo 'background-color:#f8f8f8;'; ?>">
                             <td><? echo $i; ?></td>
-                            <td><? echo $data['name']; ?></td>
+                            <!--<td><? echo $data['name']; ?></td>-->
                             <td><? echo $data['email']; ?></td>
                             <td><? echo date( 'F d, Y - H:i:s', strtotime($data['time'])); ?></td>
                         </tr>
