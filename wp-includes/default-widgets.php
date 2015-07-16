@@ -1468,7 +1468,7 @@ function wp_widgets_init() {
 
 	register_widget('WP_Nav_Menu_Widget');
 
-	register_widget('Zetta_Recent_Posts');
+	//register_widget('Zetta_Recent_Posts');
 	
 	register_widget('Zetta_Tag_Cloud');
 
