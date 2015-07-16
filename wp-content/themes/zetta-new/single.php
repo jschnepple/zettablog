@@ -20,7 +20,7 @@ $f = "F jS, Y";
 				</time>
 			</p>
 			<h1 style = "font-size: 26px; letter-spacing:-1px; color: #177caf; line-height: 28px; display: block; padding-bottom: 0px;" class="postTitle helv entry-title"><a style = "color: #177caf;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-            <?php if (get_the_author() == "Courtenay Troxel"){?><span class="theAuthor">by <a href = "http://www.zetta.net/author/courtenay" rel="author" class="author"><?php elseif (get_the_author() == "Maggie Getova") {?><span class="theAuthor">by <a href = "http://www.zetta.net/author/maggie" rel="author" class="author"><?php
+            <?php if (get_the_author() == "Courtenay Troxel"){?><span class="theAuthor">by <a href = "http://www.zetta.net/author/courtenay" rel="author" class="author"><?php } elseif (get_the_author() == "Maggie Getova") {?><span class="theAuthor">by <a href = "http://www.zetta.net/author/maggie" rel="author" class="author"><?php
             } the_author() ?></a></span><?php } else {?> <span class="theAuthor">by <a href = "http://www.zetta.net/management.php" rel="author"><?php the_author() ?></a></span> <?php  } ?>
 
 			<div class="entry">
