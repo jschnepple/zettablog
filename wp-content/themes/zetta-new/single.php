@@ -158,8 +158,8 @@ $f = "F jS, Y";
 
 		<p>Sorry, no posts matched your criteria.</p>
 
-<?php endif; ?>
-
+    <?php endif; ?>
+    <?php comments_template(); ?> 
 	</div><!-- single.php -->
 </div> <!-- end col1of2 --><!-- single.php -->
 <?php get_sidebar(); ?>
