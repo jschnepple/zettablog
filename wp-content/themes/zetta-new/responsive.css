@@ -433,6 +433,7 @@
 	a.thumbnail-wrapper img {max-width:100%; margin-right:0;}
 	img.alignleft {float:none; display:block; margin:0 !important;}
 	.authorBox {width:95%;}
+	.authorBox .authDetails {float:none !important; width: auto !important;}
 	.authorBox .authPhoto {margin-right:10px;}
 	.followRight {width:100%; display:block;padding-top:20px;}
 	#respond { width:100% !important;}
