@@ -326,7 +326,7 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 						<div id="col1of2" class="blog">
                         	<?php if (!is_author() && !is_search()) { ?>
                             <div class="header-title">
-								<h3 class="helv">The Zetta.net Blog</h3>
+								<a href="http://blog.zetta.net" class="helv">The Zetta.net Blog</a>
                                 <h2 class="helv">News, Information & Opinion on Cloud Backup + Disaster Recovery</h2>
                             </div>
                             <?php } ?>							
