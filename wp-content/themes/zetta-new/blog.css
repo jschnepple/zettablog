@@ -931,4 +931,4 @@ a.thumbnail-wrapper img{display:block;max-width:180px;float:left;margin-right:15
   border-top: 0.7em double #fff;
   border-bottom: 0.7em double #fff;
 }
-.header-title a {font-size: 345%; color: #f79422;}
+.header-title a {font-size: 345%; color: #f79422 !important; font-family: helvCondensed !important;}
