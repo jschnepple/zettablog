@@ -15,6 +15,7 @@ class ExpressCurate_SocialManager
     const SOCIAL_PUBLISHED_POST_MESSAGES_META = '_expresscurate_social_published_post_messages';
     const SOCIAL_APPROVED_POST_MESSAGES_META = '_expresscurate_social_approved_post_messages';
     const SOCIAL_POST_MESSAGES_META = '_expresscurate_social_post_messages';
+    const SOCIAL_POST_COUNTER = '_expresscurate_social_post_counter';
 
     const APPROVED = 'approved';
     const PUBLISHED = 'published';
@@ -36,6 +37,15 @@ class ExpressCurate_SocialManager
         }
 
         return self::$instance;
+    }
+
+    public function saveSocialPublishingStatus() {
+        $data = $_REQUEST;
+        $status = $data['status'];
+        if($status == 'off'){
+            update_option('expresscurate_buffer_access_token', '');
+        }
+        update_option('expresscurate_social_publishing', $status);
     }
 
     public static function saveActiveProfiles()
@@ -91,12 +101,11 @@ class ExpressCurate_SocialManager
         return $messages[0];
     }
 
-    public function savePostMessages()
+    public function savePostMessages($post_id = null, $messages = null)
     {
-
         $data = $_REQUEST;
-        $post_id = $data['post_id'];
-        $messages = json_decode(stripslashes($data['messages']), true);
+        $post_id = $post_id ? $post_id : $data['post_id'];
+        $messages = $messages ? $messages : json_decode(stripslashes($data['messages']), true);
 
         if (empty($post_id)) {
             return null;
@@ -119,8 +128,11 @@ class ExpressCurate_SocialManager
 
         }
 
+        $publishedPostMessages = $this->getPublishedPostMessages($post_id);
+
         update_post_meta($post_id, self::SOCIAL_APPROVED_POST_MESSAGES_META, $approved);
         update_post_meta($post_id, self::SOCIAL_POST_MESSAGES_META, $allMessages);
+        update_post_meta($post_id, self::SOCIAL_POST_COUNTER, count($approved)+count($publishedPostMessages));
     }
 
     public function publishPostMessages($post_id = null)
@@ -129,10 +141,11 @@ class ExpressCurate_SocialManager
         $publishedPostMessages = $this->getPublishedPostMessages($post_id);
 
         $buffer = new ExpressCurate_BufferClient();
+        $permalink = ' ' . get_permalink($post_id);
 
         foreach ($approvedPostMessages as $messageId => $message) {
             $data = array();
-            $data[ExpressCurate_BufferClient::POST_FIELD_TEXT] = $message[self::MESSAGE] . ' ' . get_permalink($post_id);
+            $data[ExpressCurate_BufferClient::POST_FIELD_TEXT] = $message[self::MESSAGE] . $permalink;
             $data[ExpressCurate_BufferClient::POST_FIELD_PROFILE] = $message[self::PROFILE];
 
             $result = $buffer->createPost($data);
@@ -141,6 +154,7 @@ class ExpressCurate_SocialManager
         }
         // save the new statuses
         update_post_meta($post_id, self::SOCIAL_PUBLISHED_POST_MESSAGES_META, $publishedPostMessages);
-        update_post_meta($post_id, self::SOCIAL_APPROVED_POST_MESSAGES_META, '');
+        update_post_meta($post_id, self::SOCIAL_APPROVED_POST_MESSAGES_META, null);
+        update_post_meta($post_id, self::SOCIAL_POST_COUNTER, count($publishedPostMessages));
     }
 }

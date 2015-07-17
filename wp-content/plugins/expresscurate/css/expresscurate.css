@@ -637,6 +637,8 @@
         .expresscurate_bookmarks .addBookmark span span,
         .expresscurate_feed_dashboard .addFeed span span,
         .expresscurate_keywords_settings .addKeywords span span,
+        .expresscurate_settings .addUsers span span,
+        .expresscurate_settings .addKeywords span span,
         .expresscurate_widget_wrapper .addKeywords span span{
             background: url("../images/plus.svg") no-repeat transparent center;
             background-size: 14px;
@@ -983,6 +985,19 @@
     padding-top: 15px;
     padding-bottom: 25px;
 }
+.expresscurate_welcome_widget .expresscurate_dashboard > div{
+    text-align: left;
+}
+.expresscurate_welcome_widget .expresscurate_dashboard > div ul{
+    list-style: disc;
+    padding-left: 25px;
+}
+#dashboard_widget_welcome .inside{
+    padding: 0 0 12px 0;
+}
+.expresscurate_dashboard_welcome > div{
+    padding: 0 10px;
+}
 
 .expresscurate_dashboard .settingsLink {
     color: #0074a2;
@@ -1231,7 +1246,17 @@
     margin-right: 6px;
     z-index: 90000;
 }
+.expresscurate_settings .addUsers,
+.expresscurate_settings .addKeywords{
+    width: 200px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
 
+    .expresscurate_settings .addUsers input,
+    .expresscurate_settings .addKeywords input,
     .expresscurate_widget_wrapper .addKeywords input {
         height: 100%;
         width: 95%;
@@ -1245,11 +1270,18 @@
         line-height: 14px;
         border: none;
     }
+    .expresscurate_settings .addUsers input,
+    .expresscurate_settings .addKeywords input{
+        font-size: 12px;
+        line-height: 25px;
+    }
 .expresscurate_widget_wrapper .addKeywords input::-webkit-input-placeholder,
 .expresscurate_widget_wrapper .addKeywords input:-moz-placeholder {
     font-size: 14px !important;
     line-height: 14px;
 }
+    .expresscurate_settings .addUsers span ,
+    .expresscurate_settings .addKeywords span ,
     .expresscurate_widget_wrapper .addKeywords span {
         height: 35px;
         width: 35px;
@@ -1264,9 +1296,17 @@
         top: 0;
         cursor: pointer;
     }
+    .expresscurate_settings .addUsers span,
+    .expresscurate_settings .addKeywords span{
+        height: 30px;
+        width: 30px;
+    }
+.expresscurate_settings .addUsers span:hover,
+.expresscurate_settings .addKeywords span:hover,
 .expresscurate_widget_wrapper .addKeywords span:hover{
     background-color: #20d0b1;
 }
+/*.expresscurate_settings .addKeywords ::-webkit-input-placeholder,*/
 .expresscurate_widget_wrapper ::-webkit-input-placeholder {
     padding-top: 3px;
     color: #555555;
@@ -1938,13 +1978,14 @@
     margin-left: 10px;
     cursor: pointer;
 }
-
+#expresscurate_loading #img-load ,
 .expresscurate_dialog #expresscurate_loading #img-load {
     position: absolute;
     top: 47%;
     left: 50%;
 }
 
+ #expresscurate_loading ,
 .expresscurate_dialog #expresscurate_loading {
     display: none;
     width: 100%;
@@ -2941,7 +2982,7 @@
 }
 .expresscurate .tab-content > div{
     min-height: 70vh;
-    max-width: 800px;
+    max-width: 1000px;
 }
 .expresscurate_advancedSEO_widget .tab-link.disabled,
 .expresscurate .tab-link.disabled{
@@ -3076,7 +3117,47 @@
     color: #25bfa1;
     margin: 0 0 0 5px;
 }
-
+.expresscurate .socialPublishingWrap{
+    margin-left: 30px;
+}
+    .expresscurate .socialPublishingWrap li{
+        display: inline-block;
+    }
+/*feed stop words*/
+    .expresscurate_settings .usersToAlert li,
+    .expresscurate_settings .stopKeywords li{
+        display: inline-block;
+        border: solid 1px #E6E6E6;
+        height: 30px;
+        margin: 0 5px 5px 0 ;
+        position: relative;
+        padding: 0 40px 0 10px;
+        line-height: 28px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        vertical-align: top;
+    }
+        .expresscurate_settings .usersToAlert li span,
+        .expresscurate_settings .stopKeywords li span{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            color: #fefefe;
+            font-size: 30px;
+            text-align: center;
+            line-height: 30px;
+            right: 0;
+            top: -1px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            cursor: pointer;
+            background: url("../images/remove.svg") #1cbb9f no-repeat center;
+            background-size: 16px auto;
+        }
+/**/
 .expresscurate .form-table {
     margin-left: 25px;
     max-width: 877px;
@@ -3714,7 +3795,6 @@
         margin: 0;
         height: 32px;
     }
-
         .expresscurate_controls li{
             display: inline-block;
             width: 50px;
@@ -3726,12 +3806,44 @@
             cursor: default;
             position: relative;
             border: solid 1px #dddddd;
-            /*transition: background-color 400ms;
-            -webkit-transition: background-color 400ms;
-            -moz-transition: background-color 400ms;
-            -o-transition: background-color 400ms;
-            -ms-transition: background-color 400ms;*/
-
+        }
+        .expresscurate_controls select {
+            display: inline-block;
+            width: 170px;
+            height: 32px !important;
+            margin: 0;
+            background-repeat: no-repeat;
+            cursor: default;
+            border: solid 1px #25bfa1;
+            vertical-align: top;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-image: url("../images/select.svg");
+            background-size: 13px auto;
+            background-position: 150px -17px;
+            padding: 0px 20px 0 5px;
+        }
+            .expresscurate_controls select option.expresscurate_filterOption{
+                display: block;
+                height: 30px;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        /*target Internet Explorer 9 and Internet Explorer 10:*/
+        @media screen and (min-width:0\0) {
+            select {
+                background:none;
+                padding: 5px;
+            }
         }
         .expresscurate_controls li.layout{
             background-image: url("../images/view.svg");
@@ -3749,7 +3861,7 @@
             .expresscurate_controls .check{
                 height: 30px;
                 width: 50px;
-                margin-left: 10px;
+                margin: 0 7px 0 10px;
                 background-image: url("../images/feed_icons.svg");
                 background-color: transparent;
                 background-size: auto 100px;
@@ -4805,6 +4917,30 @@
         font-size: 14px;
     }
 /**/
+@media (min-width: 467px) {
+    .expresscurate_controls br.second{
+        display: none;
+    }
+}
+@media (max-width: 467px) {
+    .expresscurate_controls br.second{
+        display: block;
+        clear: both;
+    }
+    .expresscurate_controls li{
+       margin-top: 5px;
+    }
+}
+@media (min-width: 1064px) {
+    .expresscurate_controls br.first{
+        display: none;
+    }
+}
+@media (max-width: 1064px) {
+    .expresscurate_controls br.first{
+        display: block;
+    }
+}
 @media (max-width: 1050px) {
     .expresscurate_feed_dashboard .addFeed,
     .expresscurate_bookmarks .addNewBookmark p, .expresscurate_feed_dashboard .addNewFeed p{
@@ -4871,6 +5007,7 @@
     text-align: left;
 }
 .expresscurate_supportBlock,
+.expresscurate_welcomeBlock,
 .expresscurate_keywordsBlock,
 .expresscurate_smartPublishBlock,
 .expresscurate_feedBlock,
@@ -5124,29 +5261,17 @@
         background-color: rgba(0,172,273,1);
         background-position: 6px -64px;
     }
-    .expresscurate_social_box_Twitter:hover{
-        background-color: rgba(0,172,273,0.8);
-    }
     .expresscurate_social_box_Facebook{
         background-color: rgba(59,89,152,1);
         background-position: 5px 0;
-    }
-    .expresscurate_social_box_Facebook:hover{
-        background-color: rgba(59,89,152,0.8);
     }
     .expresscurate_social_box_LinkedIn{
         background-color: rgba(30,135,189,1);
         background-position: 6px -173px;
     }
-    .expresscurate_social_box_LinkedIn:hover{
-        background-color: rgba(30,135,189,0.8);
-    }
     .expresscurate_social_box_Google{
         background-color: rgba(212,65,50,1);
         background-position: 7px -120px;
-    }
-    .expresscurate_social_box_Google:hover{
-        background-color: rgba(212,65,50,0.8);
     }
         .expresscurate_social_box .dailySuggestions{
             display: inline-block;

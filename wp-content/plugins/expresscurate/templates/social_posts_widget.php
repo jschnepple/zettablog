@@ -4,20 +4,28 @@ $buffer = new ExpressCurate_BufferClient();
 $profiles = $buffer->getProfiles();
 
 $profilesStatus = array();
-if (get_option('expresscurate_social_publishing_profiles', '')) {
-    $profilesStatus = json_decode(stripslashes(urldecode(get_option('expresscurate_social_publishing_profiles', ''))));
+$socialPublishingProfiles = get_option('expresscurate_social_publishing_profiles', '');
+if ($socialPublishingProfiles) {
+    $profilesStatus = json_decode(stripslashes(urldecode($socialPublishingProfiles)));
 }
 
+$socialPost = get_post_type() === 'expresscurate_spost' ? true : false;
 $publishedPosts = get_post_meta($post->ID, '_expresscurate_social_published_post_messages', true);
 $posts = get_post_meta($post->ID, '_expresscurate_social_post_messages', true);
-$postLength = 110;
 ?>
+
 <div class="expresscurate_social_post_widget">
     <input id="expresscurate_postId" type="hidden" value="<?php echo $post->ID; ?>"/>
 
     <input type="hidden" id="expresscurate_social_post_messages" name="expresscurate_social_post_messages"
-           value="<?php echo htmlspecialchars(json_encode($posts),ENT_QUOTES); ?>"/>
+           value="<?php echo htmlspecialchars(json_encode($posts), ENT_QUOTES); ?>"/>
+    <?php if ($socialPost) { ?>
+        <input type="hidden" class="expresscurate_source"
+               placeholder=""
+               id="expresscurate_source" name="expresscurate_source"
+               value="">
 
+    <?php } ?>
 
     <ul class="mainControls">
         <li id="expresscurate_addTweet" class="expresscurate_social_widget_buttons">New</li>
@@ -26,23 +34,27 @@ $postLength = 110;
         <li data-header="h2" class="expresscurate_headerTweet expresscurate_social_widget_buttons">H2</li>
         <li data-header="h3" class="expresscurate_headerTweet expresscurate_social_widget_buttons">H3</li>
 
-        <li id="expresscurate_socialTitlePost" class="expresscurate_social_widget_buttons">Social Title</li>
-        <li id="expresscurate_socialDescriptionPost" class="expresscurate_social_widget_buttons">Social Description</li>
-        <li id="expresscurate_socialShortDescriptionPost" class="expresscurate_social_widget_buttons">Social Short
-            Description
-        </li>
+        <?php if (!$socialPost) { ?>
+            <li id="expresscurate_socialTitlePost" class="expresscurate_social_widget_buttons">Social Title</li>
+            <li id="expresscurate_socialDescriptionPost" class="expresscurate_social_widget_buttons">Social
+                Description
+            </li>
+            <li id="expresscurate_socialShortDescriptionPost" class="expresscurate_social_widget_buttons">Social Short
+                Description
+            </li>
+        <?php } ?>
     </ul>
 
     <?php
     if (!empty($posts)) {
         foreach ($posts as $i => $data) {
-            $postLengthCount = $postLength - strlen($data['message']);
-            $approved=$data['approved'];?>
+            $postLengthCount = ($data['postLength']);
+            $approved = $data['approved']; ?>
             <div class="expresscurate_socialPostBlock" id="<?php echo $data['id']; ?>">
                 <ul class="topControls">
 
                     <?php if (!empty($profiles)) { ?>
-                        <select name="profile" id="profile" <?php if($approved) echo 'disabled="disabled"' ?> >
+                        <select name="profile" id="profile" <?php if ($approved) echo 'disabled="disabled"' ?> >
                             <?php
                             foreach ($profiles as $profile) {
                                 $profileId = $profile->id;
@@ -52,22 +64,30 @@ $postLength = 110;
                                     if ($profileId == $data['profile_ids']) {
                                         echo 'selected="selected"';
                                     }
-                                    ?> value="<?php echo $profileId; ?>"><?php echo $profile->formatted_service; ?> / <?php echo $profile->formatted_username; ?></option>
+                                    ?> value="<?php echo $profileId; ?>"><?php echo $profile->formatted_service; ?>
+                                        / <?php echo $profile->formatted_username; ?></option>
                                 <?php }
                             } ?>
                         </select>
                     <?php } ?>
 
-                    <li class="close expresscurate_floatRight <?php if($approved) echo 'expresscurate_displayNone' ?> "></li>
+                    <li class="close expresscurate_floatRight <?php if ($approved) echo 'expresscurate_displayNone' ?> "></li>
                     <div class="expresscurate_clear"></div>
                 </ul>
-                <textarea name="" class="expresscurate_social_post_content expresscurate_disableInputStyle" <?php if($approved) echo 'readonly="readonly"' ?>
+                <textarea name=""
+                          class="expresscurate_social_post_content expresscurate_disableInputStyle" <?php if ($approved) echo 'readonly="readonly"' ?>
                           id=""><?php echo $data['message']; ?></textarea>
                 <ul class="bottomControls">
-                    <li class="expresscurate_social_widget_buttons expresscurate_floatRight <?php if($approved) echo 'expresscurate_displayNone' ?> approve">Approve</li>
-                    <li class="expresscurate_social_widget_buttons expresscurate_floatRight <?php if($approved) echo 'expresscurate_displayNone' ?> clone">Copy</li>
-                    <li class="expresscurate_socialPostLength <?php if($approved) echo 'expresscurate_displayNone' ?> expresscurate_floatRight <?php if ($postLengthCount < 0) echo 'error'; ?>"><?php echo $postLengthCount; ?></li>
-                    <li class="expresscurate_social_widget_buttons <?php if(!$approved) echo 'expresscurate_displayNone' ?> edit">Edit</li>
+                    <li class="expresscurate_social_widget_buttons expresscurate_floatRight <?php if ($approved) echo 'expresscurate_displayNone' ?> approve">
+                        Approve
+                    </li>
+                    <li class="expresscurate_social_widget_buttons expresscurate_floatRight <?php if ($approved) echo 'expresscurate_displayNone' ?> clone">
+                        Copy
+                    </li>
+                    <li class="expresscurate_socialPostLength <?php if ($approved) echo 'expresscurate_displayNone' ?> expresscurate_floatRight <?php if ($postLengthCount < 0) echo 'error'; ?>"><?php echo $postLengthCount; ?></li>
+                    <li class="expresscurate_social_widget_buttons <?php if (!$approved) echo 'expresscurate_displayNone' ?> edit">
+                        Edit
+                    </li>
                     <div class="expresscurate_clear"></div>
                 </ul>
             </div>
@@ -102,7 +122,8 @@ $postLength = 110;
                         $profileId = $profile->id;
                         if ($profilesStatus->$profileId == 'on' || empty($profilesStatus->$profileId)) {
                             ?>
-                            <option value="<?php echo $profileId; ?>"><?php echo $profile->formatted_service; ?> / <?php echo $profile->formatted_username; ?></option>
+                            <option value="<?php echo $profileId; ?>"><?php echo $profile->formatted_service; ?>
+                                / <?php echo $profile->formatted_username; ?></option>
                         <?php }
                     } ?>
                 </select>

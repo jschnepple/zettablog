@@ -13,17 +13,29 @@ var ExpressCurateSocialPostWidget = (function ($) {
     function parseContent() {
         var $contentWrap = $('#content'),
             content = (($contentWrap.css("display") === "block") ? $contentWrap.val() : tinyMCE.get("content").getContent()),
-            myRegExp = new RegExp('(<([^>]+)>)', 'ig');
+            myRegExp = new RegExp('(<([^>]+)>)', 'ig'),
+            li = $(content).find('li'),
+            posts = [];
+
+        if (li.length) {
+            $.each(li, function (index, value) {
+                var text = $(value).text();
+                posts.push(text);
+                content = content.replace(text, '');
+            });
+        }
 
         content = content.split('<p>');
         for (var i = 0; i < content.length; i++) {
             content[i] = content[i].replace(myRegExp, ' ').trim();
         }
-        content = content.filter(function (el) {
+
+        var result = $.merge(posts, content);
+        result = result.filter(function (el) {
             return el.length !== 0;
         });
 
-        return content;
+        return result;
     }
 
     function getHeader(header) {
@@ -32,6 +44,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
             data = {
                 message: $(content).find(header).text()
             };
+        ExpressCurateUtils.track('/post/social-post-widget/get' + header);
         if (data.message.length > 1) {
             createSocialPost(data);
         } else {
@@ -40,7 +53,6 @@ var ExpressCurateSocialPostWidget = (function ($) {
     }
 
     function createSocialPost(data) {
-
         var blockId = (data && data.id) ? data.id : uniqueId(),
             message = data ? data.message : '',
             messageCounter = maxLength - message.length,
@@ -54,7 +66,6 @@ var ExpressCurateSocialPostWidget = (function ($) {
         posts.push(post);
         updatePosts(posts);
         $('.mainControls').after(ExpressCurateUtils.getTemplate('socialPostWidget', post));
-
     }
 
     function postLengthValidation($block) {
@@ -82,6 +93,59 @@ var ExpressCurateSocialPostWidget = (function ($) {
         });
     }
 
+    /*social post type*/
+    function getArticle(urlList) {
+        ExpressCurateUtils.track('/post/socialpost/load');
+        var $url = $('#expresscurate_source').val(urlList),
+            errorHTML = '';
+        $("#expresscurate_loading").fadeIn('fast');
+        $.ajax({
+            type: 'POST',
+            url: 'admin-ajax.php?action=expresscurate_get_article&check=1',
+            data: $url.serialize()
+        }).done(function (res) {
+            var data = $.parseJSON(res);
+            if (data.status === 'notification') {
+                //@todo show notification
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: 'admin-ajax.php?action=expresscurate_get_article&cloned=1',
+            data: $url.serialize()
+        }).done(function (res) {
+            var data = $.parseJSON(res);
+            if (data) {
+                if (data.status === 'error') {
+                    errorHTML = '<div class="error">' + data.error + '</div>';
+                } else if (data.status === 'success') {
+                    var title = data.result.titles[0];
+                    if (title && title.length > 0) {
+                        $('#titlewrap').find('#title').val(title).text(title).focus();
+                    }
+                    var $editor = tinyMCE.get('content');
+                    if ($editor) {
+                        $editor.execCommand("mceInsertContent", true, data.result.article_html[0]);
+                    }
+                }
+            } else {
+                errorHTML = '<div class="error">Can\'t load from this page</div>';
+            }
+            if (errorHTML.length > 2) {
+                $('#title-prompt-text').before(errorHTML);
+            }
+            $("#expresscurate_loading").fadeOut('fast');
+        });
+
+    }
+
+    /*share link*/
+
+    $('.expresscurate_bookmarkBoxes').on('click', '.controls .share', function () {
+        var $elem = $(this).parents('.expresscurate_masonryItem');
+        bookmarkDelete($elem);
+    });
+    /**/
     function setupSocial() {
         var $metaTag = $('#expresscurate_social_post_messages');
 
@@ -113,6 +177,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
             $.each(posts, function (index, value) {
                 if (value.id == blockId) {
                     value.message = text;
+                    value.postLength = maxLength - text.length;
                     updatePosts(posts);
                 }
             });
@@ -149,10 +214,12 @@ var ExpressCurateSocialPostWidget = (function ($) {
                 };
                 createSocialPost(data);
             });
+            ExpressCurateUtils.track('/post/social-post-widget/getcontent');
         });
         /*add new*/
         $('#expresscurate_addTweet').on('click', function () {
             createSocialPost(null);
+            ExpressCurateUtils.track('/post/social-post-widget/createnew');
         });
         /*post from headers*/
         $('.expresscurate_headerTweet').on('click', function () {
@@ -165,6 +232,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
                 var data = {
                     message: $('#expresscurate_advanced_seo_social_title').val()
                 };
+                ExpressCurateUtils.track('/post/social-post-widget/socialtitle');
                 createSocialPost(data);
             }
         });
@@ -175,6 +243,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
                 var data = {
                     message: $('#expresscurate_advanced_seo_social_desc').val()
                 };
+                ExpressCurateUtils.track('/post/social-post-widget/socialdescription');
                 createSocialPost(data);
             }
         });
@@ -185,6 +254,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
                 var data = {
                     message: $('#expresscurate_advanced_seo_social_shortdesc').val()
                 };
+                ExpressCurateUtils.track('/post/social-post-widget/socialshortdescription');
                 createSocialPost(data);
             }
         });
@@ -205,7 +275,7 @@ var ExpressCurateSocialPostWidget = (function ($) {
                     value.message = value.message.slice(0, maxLength);
                 }
             });
-
+            ExpressCurateUtils.track('/post/social-post-widget/approve');
             updatePosts(posts);
 
             $block.find('li').addClass('expresscurate_displayNone');
@@ -246,14 +316,12 @@ var ExpressCurateSocialPostWidget = (function ($) {
             });
             var clone = $.extend({}, post);
             clone.id = uniqueId();
+            clone.postLength = maxLength - clone.message.length;
             posts.push(clone);
-
+            ExpressCurateUtils.track('/post/social-post-widget/copy');
             updatePosts(posts);
-            $('.mainControls').after(ExpressCurateUtils.getTemplate('socialPostWidget', post));
-
-
+            $block.before(ExpressCurateUtils.getTemplate('socialPostWidget', post));
         });
-
     }
 
     var isSetup = false;
@@ -264,6 +332,9 @@ var ExpressCurateSocialPostWidget = (function ($) {
                 $(document).ready(function () {
                     setupSocial();
                     isSetup = true;
+                    if (window.expresscurate_socialPostUrl) {
+                        getArticle(window.expresscurate_socialPostUrl);
+                    }
                 });
             }
         },
