@@ -33,35 +33,34 @@ get_header();
 		</div>
 		<?php while (have_posts()) : the_post(); ?>
 			<div <?php post_class() ?>>
-				<div class="authAv">
-					<?php 
-					if ( get_the_author() == "Courtenay Troxel") {?>
-					<img src="/blog/wp-content/uploads/2014/05/Courtenay-Troxel.jpg" alt="<?php the_author() ?>" />
-					<?php } ?>
-				</div>
 				<p class="date"><?php the_time('F d, Y') ?> <!-- by <?php the_author() ?> --></p>
-				<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-				<p class="authBlurb"><?php the_author_description(); if ( get_the_author_login() === "jwhitehead" ) {
-					 echo( '<a href="http://www.twitter.com/'.get_the_author_login().'" onclick="window.open(\'http://www.twitter.com/'.get_the_author_login().'\'); return false;" target="_blank">Twitter: @'.get_the_author_login().'</a>' );
-				} ?></p>
+				<h4 class="postTitle helv"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 
-				<div class="entry">
-					<?php the_content() ?>
-					<div class="twitterItems">
-						<?php
-						if ( get_the_author_login() === "jwhitehead" ) : ?>
-							<a class="followMe" href="http://www.twitter.com/<?php the_author_login(); ?>" onclick="window.open('http://www.twitter.com/<?php the_author_login(); ?>'); return false;" target="_blank"><img src="/_wp/wp-content/twittersimplistic.png" alt="Follow <?php the_author(); ?> on Twitter." height="30" width="130" /></a>
-						<?php endif; ?>
-					</div>
-					<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+				<div class="entry new">
+					<?php if ( get_the_post_thumbnail($post_id) != '' ) {
+
+					  echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+					   the_post_thumbnail();
+					  echo '</a>';
+
+					} else {
+
+					 echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+					 echo '<img src="';
+					 echo catch_that_image();
+					 echo '" alt="" />';
+					 echo '</a>';
+
+					} ?>
+					<?php the_excerpt(); ?>	
+					<div class="clear"></div>
 				</div>
 			</div>
 
 		<?php endwhile; ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+				<?php wp_pagenavi(); ?>
 		</div>
 	<?php else :
 
