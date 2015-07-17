@@ -438,7 +438,7 @@
 	.authorBox .authDetails .biography {font-size:16px !important; line-height:21px !important;}
 	.followRight {display:none;width:100%; display:block;padding-top:20px;}
 	.followLeft{display:none;}
-	.theAuthor{font-size:20px !important;}
+	.theAuthor{font-size:20px !important; margin-bottom:0px !important;}
 	#respond { width:100% !important;}
 	.newSingle .entry p{font-size:16px; line-height:21px;}
 	.newSingle .entry h2{font-size: 20px !important; margin-bottom:10px !important;}
