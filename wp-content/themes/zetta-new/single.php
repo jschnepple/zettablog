@@ -153,13 +153,13 @@ $f = "F jS, Y";
                 <a href="http://pages.zetta.net/free-trial.html" class="seeTrial helv">SEE TRIAL DETAILS</a> -->
             </div>
 		</div>        
-
+        <?php comments_template(); ?> 
 	<?php endwhile; else: ?>
 
 		<p>Sorry, no posts matched your criteria.</p>
 
     <?php endif; ?>
-    <?php comments_template(); ?> 
+    
 	</div><!-- single.php -->
 </div> <!-- end col1of2 --><!-- single.php -->
 <?php get_sidebar(); ?>
