@@ -435,6 +435,12 @@
 	.authorBox {width:95%;}
 	.authorBox .authDetails {float:none !important; width: auto !important;}
 	.authorBox .authPhoto {margin-right:10px;}
-	.followRight {width:100%; display:block;padding-top:20px;}
+	.authorBox .authDetails .biography {font-size:16px !important; line-height:21px !important;}
+	.followRight {display:none;width:100%; display:block;padding-top:20px;}
+	.followLeft{display:none;}
+	.theAuthor{font-size:20px !important;}
 	#respond { width:100% !important;}
+	.newSingle .entry p{font-size:16px; line-height:21px;}
+	.newSingle .entry h2{font-size: 20px !important; margin-bottom:10px !important;}
+
 }
