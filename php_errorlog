@@ -1,3 +1,4 @@
 [16-Jul-2015 08:24:30 UTC] PHP Parse error:  syntax error, unexpected 'elseif' (T_ELSEIF) in /home/zetta496/public_html/wp-content/themes/zetta-new/single.php on line 23
 [16-Jul-2015 08:25:10 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zetta496/public_html/wp-content/themes/zetta-new/single.php on line 24
 [16-Jul-2015 08:25:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/zetta496/public_html/wp-content/themes/zetta-new/single.php on line 24
+[17-Jul-2015 03:30:49 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/zetta496/public_html/wp-content/themes/zetta-new/header.php on line 666

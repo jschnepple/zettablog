@@ -89,7 +89,7 @@ $f = "F jS, Y";
                 <div class="authPhoto" style="padding: 4px 5px 4px 4px; background: #fff; border: 1px solid #dbdcdd; display: block; float: left; width: 130px;"><?php userphoto_the_author_photo(); ?></div>
                 <div class="authDetails" style="display: block; float: right; width: 460px;">
                 <span style = "font-size: 18px; font-weight: bold; color: #0d5977; padding: 0px; display: block; border-bottom: 1px dotted #0d5977;">About the Author</span>    
-        <span class="biography" style="font-size: 14px; color: #303030; line-height: 19px; padding: 14px 0 10px; display: block;">Maggie is Zetta.net’s junior content marketing contributor. When she’s not writing for the blog, she’s spending way too much time on the internet.</span>
+        <span class="biography" style="font-size: 14px; color: #303030; line-height: 19px; padding: 14px 0 10px; display: block;">Maggie is Zetta.net’s junior content marketing contributor. When she’s not writing for the blog, she’spending way too much time on the internet.</span>
         <!--<div class="followLeft">
                 <span class="follow" style="display: block; font-size: 13px; color: #2395c0; font-weight: bold; margin-bottom: 6px;">Follow Maggie Getova:</span>
                     <div class="followLinks" style="position:relative;">
@@ -153,14 +153,15 @@ $f = "F jS, Y";
                 <a href="http://pages.zetta.net/free-trial.html" class="seeTrial helv">SEE TRIAL DETAILS</a> -->
             </div>
 		</div>        
-
+        <?php comments_template(); ?> 
 	<?php endwhile; else: ?>
 
 		<p>Sorry, no posts matched your criteria.</p>
 
-<?php endif; ?>
-
+    <?php endif; ?>
+    
 	</div><!-- single.php -->
 </div> <!-- end col1of2 --><!-- single.php -->
 <?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

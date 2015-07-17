@@ -1,3 +1,4 @@
+
 <?php
 //header("Access-Control-Allow-Origin: *"); 
 //ini_set('display_errors',1);
@@ -329,4 +330,4 @@ twttr.conversion.trackPid('l63z1', { tw_sale_amount: 0, tw_order_quantity: 0 });
 								<h3 class="helv">The Zetta.net Blog</h3>
                                 <h2 class="helv">News, Information & Opinion on Cloud Backup + Disaster Recovery</h2>
                             </div>
-                            <?php } ?>							
+
