@@ -20,7 +20,7 @@ $f = "F jS, Y";
 				</time>
 			</p>
 			<h1 style = "font-size: 26px; letter-spacing:-1px; color: #177caf; line-height: 28px; display: block; padding-bottom: 0px;" class="postTitle helv entry-title"><a style = "color: #177caf;" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-            <?php if (get_the_author() == "Courtenay Troxel"){?><span class="theAuthor">by <a href = "http://www.zetta.net/author/courtenay" rel="author" class="author"><?php } elseif (get_the_author() == "Maggie Getova") {?><span class="theAuthor">by <a href = "http://www.zetta.net/author/maggie" rel="author" class="author"><?php the_author() ?></a></span> <?php } else {?> <span class="theAuthor">by <a href = "http://www.zetta.net/management.php" rel="author"><?php the_author() ?></a></span> <?php  } ?>
+            <?php if (get_the_author() == "Courtenay Troxel"){?><span class="theAuthor">by <a href = "http://www.zetta.net/author/courtenay" rel="author" class="author"><?php the_author() ?></a></span> <?php } elseif (get_the_author() == "Laura Knight") {?><span class="theAuthor">by <a href = " http://www.zetta.net/author/laura-knight/" rel="author" class="author"><?php the_author() ?></a></span> <?php } elseif (get_the_author() == "Maggie Getova") {?><span class="theAuthor">by <a href = "http://www.zetta.net/author/maggie" rel="author" class="author"><?php the_author() ?></a></span> <?php } else {?> <span class="theAuthor">by <a href = "http://www.zetta.net/management.php" rel="author"><?php the_author() ?></a></span> <?php  } ?>
 
 			<div class="entry">
 				<?php the_content(); ?>
@@ -89,7 +89,7 @@ $f = "F jS, Y";
                 <div class="authPhoto" style="padding: 4px 5px 4px 4px; background: #fff; border: 1px solid #dbdcdd; display: block; float: left; width: 130px;"><?php userphoto_the_author_photo(); ?></div>
                 <div class="authDetails" style="display: block; float: right; width: 460px;">
                 <span class="theAuthor" style = "font-size: 18px; font-weight: bold; color: #0d5977; padding: 0px; display: block; border-bottom: 1px dotted #0d5977;">About the Author</span>    
-        <span class="biography" style="font-size: 14px; color: #303030; line-height: 19px; padding: 14px 0 10px; display: block;">Maggie is Zetta.net’s junior content marketing contributor. When she’s not writing for the blog, she’spending way too much time on the internet.</span>
+        <span class="biography" style="font-size: 14px; color: #303030; line-height: 19px; padding: 14px 0 10px; display: block;">Maggie is Zetta.net’s junior content marketing contributor. When she’s not writing for the blog, she’s spending way too much time on the internet.</span>
         <!--<div class="followLeft">
                 <span class="follow" style="display: block; font-size: 13px; color: #2395c0; font-weight: bold; margin-bottom: 6px;">Follow Maggie Getova:</span>
                     <div class="followLinks" style="position:relative;">

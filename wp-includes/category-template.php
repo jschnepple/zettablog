@@ -613,7 +613,7 @@ function wp_list_categories( $args = '' ) {
 function wp_tag_cloud( $args = '' ) {
 	$defaults = array(
 		'smallest' => 8, 'largest' => 22, 'unit' => 'pt', 'number' => 45,
-		'format' => 'flat', 'separator' => "\n | ", 'orderby' => 'name', 'order' => 'ASC',
+		'format' => 'flat', 'separator' => "\n", 'orderby' => 'name', 'order' => 'ASC',
 		'exclude' => '', 'include' => '', 'link' => 'view', 'taxonomy' => 'post_tag', 'post_type' => '', 'echo' => true
 	);
 	$args = wp_parse_args( $args, $defaults );
