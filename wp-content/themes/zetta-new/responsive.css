@@ -430,7 +430,7 @@
 	#signupBox{display:none;}
 	.header-title h3 {font-size:245%}
 	.header-title {margin: 25px 0 25px 0;}
-	a.thumbnail-wrapper img {max-width:100%; margin-right:0;}
+	a.thumbnail-wrapper img {max-width:100%; margin-right:0; width:100%; margin-bottom:10px;}
 	img.alignleft {float:none; display:block; margin:0 !important;}
 	.authorBox {width:95%;}
 	.authorBox .authDetails {float:none !important; width: auto !important;}
