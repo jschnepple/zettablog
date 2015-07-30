@@ -317,13 +317,19 @@ html>body .entry li {
 	font-size: 14px;
 	line-height: 20px;
 	color: #303030;
+	font-family: Arial, Helvetica, Sans-Serif;
 }
 
 .entry ul li:before, #sidebar ul ul li:before { content: "\00BB \0020"; }
-
+.entry ul {
+	padding: 0 0 0 35px;
+	margin: 0;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
 .entry ol {
 	padding: 0 0 0 35px;
 	margin: 0;
+	font-family: Arial, Helvetica, Sans-Serif;
 }
 
 .entry ol li {
@@ -348,6 +354,7 @@ html>body .entry li {
 	list-style-image: none;
 	margin-bottom: 15px;
 	margin: 0 0 10px 30px;
+	font-family: Arial, Helvetica, Sans-Serif;
 }
 
 #sidebar ul p, #sidebar ul select {
@@ -659,7 +666,7 @@ color: #0085C8;
 padding-bottom: 5px;
 }
 
-#respond {width: 640px !important;}
+#respond {width: 640px !important; margin-top:20px;}
 
 /* ---------- AUTHOR PAGE ------------ */
 h1.authorTitle {color:#2395c0; font-size: 37px;}
